@@ -1,20 +1,33 @@
 package com.yinyinhtwe.OpenAIProject;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
 import java.util.Objects;
 
 
+@Entity
 public class JuiceRecipes {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     private String ingredient;
 
-    public JuiceRecipes(int id, String name, String ingredient) {
+    public JuiceRecipes(){
+
+    }
+
+
+    public JuiceRecipes(Integer id, String name, String ingredient) {
         this.id = id;
         this.name = name;
         this.ingredient = ingredient;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -53,4 +66,5 @@ public class JuiceRecipes {
 
     public void add(JuiceRecipes recipes) {
     }
+
 }
