@@ -31,7 +31,7 @@ Start the PostgreSQL database service using Docker Compose:
 docker compose up -d
 ```
 ## 3. Run the Spring Boot Application
-The application will launch on [!http://localhost:8080]
+The application will launch on http://localhost:8080
 
 ## 📡 API Endpoints
 Base URL: http://localhost:8080/api/v1/juice-recipes
@@ -42,14 +42,15 @@ Base URL: http://localhost:8080/api/v1/juice-recipes
 |`GET`	  | `api/v1/juice-recipes/{id}`	| Fetch a specific juice recipe by ID|
 |`POST` | `api/v1/juice-recipes`      | 	Add a new juice recipe|
 
-## HTTP Request Examples (`request.http`)
+## HTTP Request Examples (request.http)
 ### 1. Get All Recipes: GET http://localhost:8080/api/v1/juice-recipes
 ### 2. Get Recipe by ID : GET http://localhost:8080/api/v1/juice-recipes/1
 ### 3. Create a New Recipe (POST)
-Header:
-Content-Type: application/json
-Payload Examples:
+**Header:** 'Content-Type: application/json'
+#### **Payload Examples:**
+```json
 {
   "name": "Celery Juice",
   "ingredient": "Celery, Green apple, Lemon, Ginger"
 }
+```
